@@ -1,9 +1,8 @@
 approvers:
-- marcolan018
-- bjoydeep
-- subbarao-meduri
 - dislbenn
-
+- bjoydeep
+- cylang82
+- marcolan018
+- subbarao-meduri
 reviewers:
-- clyang82
-- morvencao
+- dislbenn
