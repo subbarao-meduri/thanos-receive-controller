@@ -73,3 +73,5 @@ By default, upon a scale up, the controller adds all new receiver replicas into 
 An alternative is to use the `--allow-only-ready-replicas`, which modifies this behavior. Instead, upon a scale-up, new replicas are added only after it is confirmed they are ready. This means:
 - Old replicas keep operating with the old hashring, until all new replicas are ready. Once this is true, the hashring is updated to include all replicas in the stateful set
 - New replicas will initially come up with the old hashring configuration. This means they will serve only as a "router" and any requests that they receive will be forwarded to replicas in the old hashring. Once _all_ new receiver replicas are ready, the hashring will be updated to include both old and new replicas.
+
+Date Rebuild: Thu Sep 15 15:32:54 EDT 2022
