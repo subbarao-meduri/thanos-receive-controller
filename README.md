@@ -74,4 +74,4 @@ An alternative is to use the `--allow-only-ready-replicas`, which modifies this 
 - Old replicas keep operating with the old hashring, until all new replicas are ready. Once this is true, the hashring is updated to include all replicas in the stateful set
 - New replicas will initially come up with the old hashring configuration. This means they will serve only as a "router" and any requests that they receive will be forwarded to replicas in the old hashring. Once _all_ new receiver replicas are ready, the hashring will be updated to include both old and new replicas.
 
-Date Rebuild: Thu Sep 15 15:32:54 EDT 2022
+Date Rebuild: Thu Sep 22 10:37:07 EDT 2022
