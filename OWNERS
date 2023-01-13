@@ -1,7 +1,12 @@
 approvers:
 - dislbenn
-- bjoydeep
 - marcolan018
+- ngraham20
 - subbarao-meduri
+- bjoydeep
+
 reviewers:
-- dislbenn
+- clyang82
+- haoqing0110
+- morvencao
+- songleo
