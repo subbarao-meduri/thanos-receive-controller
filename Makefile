@@ -14,7 +14,7 @@ JSONNET_SRC = $(shell find . -name 'vendor' -prune -o -name '*.libsonnet' -print
 all: generate validate fmt thanos-receive-controller
 
 thanos-receive-controller: go-vendor main.go
-	CGO_ENABLED=0 GO111MODULE=on GOPROXY=https://proxy.golang.org go build -mod vendor -v
+	CGO_ENABLED=1 GO111MODULE=on GOPROXY=https://proxy.golang.org go build -mod vendor -v
 
 .PHONY: generate
 generate: jsonnet-vendor ${ALERTS} ${RULES} ${DASHBOARDS} ${MANIFESTS}
