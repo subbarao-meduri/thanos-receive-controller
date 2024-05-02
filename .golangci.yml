@@ -18,6 +18,8 @@ linters:
   - ireturn
   - varnamelen
   - paralleltest
+  - typecheck
+  - cyclop
 
 linters-settings:
   errcheck:
