@@ -1,0 +1,20 @@
+# Copyright Contributors to the Open Cluster Management project
+# Licensed under the Apache License 2.0
+
+FROM brew.registry.redhat.io/rh-osbs/openshift-golang-builder:rhel_8_1.20 AS builder
+
+WORKDIR /workspace
+
+COPY . .
+
+RUN  make thanos-receive-controller
+
+FROM registry.access.redhat.com/ubi8/ubi-minimal:latest
+
+COPY --from=builder /workspace/thanos-receive-controller /usr/bin/thanos-receive-controller
+
+RUN microdnf update -y && microdnf clean all
+
+USER 65534
+
+ENTRYPOINT ["/usr/bin/thanos-receive-controller"]
